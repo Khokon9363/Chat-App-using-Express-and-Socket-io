@@ -30,7 +30,9 @@ io.on('connection', (socket) => {
   })
 })
 
+const PORT = process.env.PORT || 3000
+
 // console someting if server is running on a port
-server.listen(process.env.PORT || 3000, () => {
-  console.log('listening on *: process.env.PORT || 3000')
+server.listen(PORT, () => {
+  console.log(`listening on: ${PORT}`)
 })
