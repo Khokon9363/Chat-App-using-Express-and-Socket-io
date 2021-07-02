@@ -25,8 +25,8 @@ io.on('connection', (socket) => {
   // check if webpage receives any event
   socket.on('chat-channel', (message) => {
     console.log(message)
-    socket.broadcast.emit('chat-channel', message) // to send all expect sender
-    // io.emit('chat-channel', message) // to send all including sender
+    // socket.broadcast.emit('chat-channel', message) // to send all expect sender
+    io.emit('chat-channel', message) // to send all including sender
   })
 })
 
