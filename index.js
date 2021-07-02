@@ -32,5 +32,5 @@ io.on('connection', (socket) => {
 
 // console someting if server is running on a port
 server.listen(3000, () => {
-  console.log('listening on *:3000')
+  console.log('listening on *: process.ENV.port || 3000')
 })
